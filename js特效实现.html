@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js特效</title>
+    <link href="ALLcss.css" rel="stylesheet" type="text/css"/>
+    <link href="js.css" rel="stylesheet" type="text/css"/>
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src:  url('fonts/icomoon.eot?7kkyc2');
+            src:  url('fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+            url('fonts/icomoon.ttf?7kkyc2') format('truetype'),
+            url('fonts/icomoon.woff?7kkyc2') format('woff'),
+            url('fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+        i {
+            font-family: "icomoon";
+        }
+    </style>
+</head>
+<body>
+<div class="jshead">
+    <div class="search" id="search">
+        <div class="city">
+            <i></i>
+            <span>切换你的城市</span>
+        </div>
+        <div class="part">
+
+            <span>特效</span>
+
+            <span class="line">布局
+            </span>
+            <i></i>
+        </div>
+
+        <div class="find">
+            <input type="text" id="find_input"/>
+            <a href="#" id="find_a"><i></i></a>
+        </div>
+    </div>
+</div>
+<div class="jsbody">
+    <div class="jsnav">
+        <ul class="parentWrap">
+            <li class="menuGroup">
+                <span class="menuTitle">首页</span>
+                <div>
+                    <ul>
+                        <li><a href="商城首页.html">首页</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="menuGroup">
+                <span class="menuTitle">js的特效实现</span>
+                <div class="menuTitleOne">
+                    <ul>
+                        <li class="menuTitleOne1">轮播图</li>
+                        <li class="menuTitleOne1">搜索栏目</li>
+                        <li class="menuTitleOne1"><a href="手风琴.html" target="_blank">广告手风琴</a></li>
+                        <li class="menuTitleOne1"><a href="鼠标移动.html" target="_blank">鼠标拖动</a></li>
+                        <li class="menuTitleOne1"><a href="图像放大.html" target="_blank">图像放大器</a></li>
+
+                    </ul>
+                </div>
+            </li>
+            <li class="menuGroup">
+                <span class="menuTitle">JQuery的特效实现</span>
+                <div class="menuTitleOne">
+                    <ul>
+                        <li class="menuTitleOne2">轮播图</li>
+                        <li class="menuTitleOne2">淘宝广告图</li>
+                        <li class="menuTitleOne2"><a href="弹幕.html" target="_blank">弹幕特效</a></li>
+
+                        <li class="menuTitleOne2">下拉菜单</li>
+                        <li class="menuTitleOne2">评分特效</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="menuGroup">
+                <span class="menuTitle">页面布局</span>
+                <div>
+                    <ul>
+                        <li class="menuTitleOne3">三栏布局</li>
+                        <li class="menuTitleOne3">后台界面布局</li>
+                        <li class="menuTitleOne3">商城网站布局</li>
+
+                    </ul>
+                </div>
+            </li>
+            <li class="menuGroup">
+                <span class="menuTitle">插件</span>
+                <div>
+                    <ul>
+                        <li>轮播图</li>
+                        <li>手风琴</li>
+                        <li>图像放大器</li>
+                        <li>动画效果</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="nav_jsbody">
+        <div class="bodyOne one all"  id="box">
+            <div class="screen" id="screen"><!--相框-->
+                <ul id="ul">
+                    <li><img src=" images/001.jpg" width="500" height="200"/></li>
+                    <li><img src="images/002.jpg" width="500" height="200"/></li>
+                    <li><img src="images/003.jpg" width="500" height="200"/></li>
+                    <li><img src="images/004.jpg" width="500" height="200"/></li>
+                    <li><img src="images/005.jpg" width="500" height="200"/></li>
+                </ul>
+                <ol id="ol">
+                </ol>
+            </div>
+            <div id="arr"><span id="left">&lt;</span><span id="right">&gt;</span></div>
+        </div>
+        <div class="bodyOne">
+            <div id="box1">
+                <input type="text" id="txt" value="请输入a">
+                <input type="button" value="搜索" id="btn">
+
+            </div>
+        </div>
+        <div class="bodyOne">
+        </div>
+        <div class="bodyOne">
+
+                <img src="images/bird.png" id="im"/>
+
+        </div>
+        <div></div>
+        <div class="bodytwo">
+            <div class="slider">
+                <ul>
+                    <li><a href="#"><img src="images/img/001.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/img/002.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/img/003.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/img/004.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/img/5.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/img/6.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/img/7.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/img/8.jpg" alt=""></a></li>
+                </ul>
+                <!--箭头-->
+                <div class="arrow">
+                    <span class="arrow-left">&lt;</span>
+                    <span class="arrow-right">&gt;</span>
+                </div>
+            </div>
+        </div>
+        <div class="bodytwo wr">
+            <div class="wrapper">
+
+                <ul id="left1">
+                    <li><a href="#">女靴</a></li>
+                    <li><a href="#">雪地靴</a></li>
+                    <li><a href="#">冬裙</a></li>
+                    <li><a href="#">呢大衣</a></li>
+                    <li><a href="#">毛衣</a></li>
+                    <li><a href="#">棉服</a></li>
+                    <li><a href="#">女裤</a></li>
+                    <li><a href="#">羽绒服</a></li>
+                    <li><a href="#">牛仔裤</a></li>
+                </ul>
+                <ul id="center">
+                    <li><a href="#"><img src="images/img/女靴.jpg" width="200" height="250"/></a></li>
+                    <li><a href="#"><img src="images/img/雪地靴.jpg" width="200" height="250"/></a></li>
+                    <li><a href="#"><img src="images/img/冬裙.jpg" width="200" height="250"/></a></li>
+                    <li><a href="#"><img src="images/img/呢大衣.jpg" width="200" height="250"/></a></li>
+                    <li><a href="#"><img src="images/img/毛衣.jpg" width="200" height="250"/></a></li>
+                    <li><a href="#"><img src="images/img/棉服.jpg" width="200" height="250"/></a></li>
+                    <li><a href="#"><img src="images/img/女裤.jpg" width="200" height="250"/></a></li>
+                    <li><a href="#"><img src="images/img/羽绒服.jpg" width="200" height="250"/></a></li>
+                    <li><a href="#"><img src="images/img/牛仔裤.jpg" width="200" height="250"/></a></li>
+                    <li><a href="#"><img src="images/img/女包.jpg" width="200" height="250"/></a></li>
+                    <li><a href="#"><img src="images/img/男靴.jpg" width="200" height="250"/></a></li>
+                    <li><a href="#"><img src="images/img/登山鞋.jpg" width="200" height="250"/></a></li>
+                    <li><a href="#"><img src="images/img/皮带.jpg" width="200" height="250"/></a></li>
+                    <li><a href="#"><img src="images/img/围巾.jpg" width="200" height="250"/></a></li>
+                    <li><a href="#"><img src="images/img/皮衣.jpg" width="200" height="250"/></a></li>
+                    <li><a href="#"><img src="images/img/男毛衣.jpg" width="200" height="250"/></a></li>
+                    <li><a href="#"><img src="images/img/男棉服.jpg" width="200" height="250"/></a></li>
+                    <li><a href="#"><img src="images/img/男包.jpg" width="200" height="250"/></a></li>
+
+                </ul>
+                <ul id="right1">
+                    <li><a href="#">女包</a></li>
+                    <li><a href="#">男靴</a></li>
+                    <li><a href="#">登山鞋</a></li>
+                    <li><a href="#">皮带</a></li>
+                    <li><a href="#">围巾</a></li>
+                    <li><a href="#">皮衣</a></li>
+                    <li><a href="#">男毛衣</a></li>
+                    <li><a href="#">男棉服</a></li>
+                    <li><a href="#">男包</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="bodytwo tack">
+            <div class="boxDom" id="boxDom">
+                <div class="idDom" id="idDom">
+                    <div class="content">
+                        <p class="title">吐槽:</p>
+                        <input type="text" class="text" id="text"/>
+                        <button type="button" class="btn" id="btn2">发射</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bodytwo list">
+            <div class="wrap">
+                <ul>
+                    <li>
+                        <a >一级菜单</a>
+                        <ul class="ul">
+                            <li><a>二级1</a></li>
+                            <li><a>2</a></li>
+                            <li><a>3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>一级菜单</a>
+                        <ul>
+                            <li><a>二级1</a></li>
+                            <li><a>2</a></li>
+                            <li><a>3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>一级菜单</a>
+                        <ul>
+                            <li><a>二级1</a></li>
+                            <li><a>2</a></li>
+                            <li><a>3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bodytwo star">
+            <div class="star_c">
+            <ul class="comment">
+                <li>☆</li>
+                <li>☆</li>
+                <li>☆</li>
+                <li>☆</li>
+                <li>☆</li>
+            </ul>
+            </div>
+        </div>
+        <div class="bodythree">3</div>
+        <div class="bodythree">123</div>
+        <div class="bodythree">2</div>
+
+    </div>
+</div>
+
+
+<script src=" jquery-1.12.4.js"></script>
+<script src="common.js"></script>
+<script>
+//导航栏
+    $(function(){
+        //导航栏的实现
+        $(".menuTitle").click(function () {
+            $(this).next().slideDown(200).parent().siblings().children("div").slideUp(200);
+        });
+        //内部信息的实现
+        $(".menuTitleOne1").click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+            var idx=$(this).index();
+            $(".bodyOne").eq(idx).addClass("one").siblings().removeClass("one")
+        });
+        $(".menuTitleOne2").click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+
+            var idx1 = $(this).index();
+            $(".bodytwo").eq(idx1).addClass("one").siblings().removeClass("one");
+        });
+        $(".menuTitleOne3").click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+
+            var idx2 = $(this).index();
+            $(".bodythree").eq(idx2).addClass("one").siblings().removeClass("one");
+        });
+    });
+//轮播图
+    // 轮播图
+    var box = document.getElementById("box");
+    //获取相框
+    var screen = document.getElementById("screen");
+    //获取相框的宽
+    var imgWidth = screen.offsetWidth;
+    //获取ul
+    var ulObj = document.getElementById("ul");
+    //获取li
+    var list = ulObj.children;
+    //获取ol
+    var olObj =document.getElementById("ol");
+
+    //获取span
+    var arr = document.getElementById("arr");
+
+    var pic=0;//全局变量
+    //创建小按钮
+    console.log();
+    for(var i=0;i<list.length;i++){
+        //创建li,加入到ol中
+        var liObj = document.createElement("li");//创建li标签
+        //存储索引
+        liObj.setAttribute("index",i);
+
+        olObj.appendChild(liObj);//将ol加入到li中
+        liObj.innerHTML=(i+1);
+        //鼠标进入事件
+        liObj.onmouseover=function(){
+            for(var j=0;j<olObj.children.length;j++){
+                olObj.children[j].removeAttribute("class")
+            }
+            this.className="current";
+            //获取索引
+            pic=this.getAttribute("index");
+            //调用动画移动ul
+            animate(ulObj,-pic*imgWidth);
+
+        };
+    }
+
+    olObj.children[0].className = "current";
+
+    //克隆ul中第一个li加到ul中最后==克隆
+    ulObj.appendChild(ulObj.children[0].cloneNode(true));
+    //自动播放
+    var timeId = setInterval(clickRight,1000);
+    //鼠标进入box显示span
+    box.onmouseover=function () {
+        arr.style.display="block";
+        clearInterval(timeId);
+    };
+    //离开隐藏
+    box.onmouseout=function () {
+        arr.style.display="none";
+        timeId = setInterval(clickRight,1000);
+    };
+    //点击右边按钮
+    document.getElementById("right").onclick=clickRight;
+    function clickRight(){
+        // pic=5
+        if(pic==list.length-1){//当索引为0时图片迅速回到第一张做无缝连接
+            pic=0;
+            ulObj.style.left=pic+"px";
+        }
+        pic++;
+        animate(ulObj,-pic*imgWidth);
+        //如果pic==5,此时显示第六个,用户看到的是第一个图
+        if(pic==list.length-1){
+            olObj.children[0].className="current";
+            olObj.children[olObj.children.length-1].className=""
+        }else{
+            for(var i=0;i<olObj.children.length;i++){
+                olObj.children[i].removeAttribute("class");
+            }
+            olObj.children[pic].className="current";
+        }
+    }
+    //点击左边按钮
+    document.getElementById("left").onclick=function(){
+
+        if(pic==0){
+            pic=5;
+            ulObj.style.left=-pic*imgWidth;
+        }
+        pic--;
+        animate(ulObj,-pic*imgWidth);
+        //设置小按钮颜色
+        for(var i=0;i<olObj.children.length;i++){
+            olObj.children[i].removeAttribute("class");
+        }
+        //当前pic索引对应的按钮设置颜色
+        olObj.children[pic].className="current";
+    }
+
+
+//搜索栏
+    var keyWords = ["abc","aaa","bbb","bbc"];
+    //获取键盘抬起事件
+    document.getElementById("txt").onkeyup = function(){
+        //每次键盘抬起都判断页面中有没有div
+        if(document.getElementById("dv")){
+            document.getElementById("box1").removeChild(document.getElementById("dv"));
+        }
+
+        //获取文本框内容
+        var text = this.value;
+        //把文本框的内容和数组内容对比
+        var tempArr = [];//临时空数组用来存放与输入结果相同的数组
+        for(var i=0;i<keyWords.length;i++){
+            if(keyWords[i].indexOf(text)==0){//输入的字符和定义数组中的一第个字符相同
+                tempArr.push(keyWords[i]);//将相同的内容添加到空数组中
+            }
+        }
+        //遍历临时数组，如果文本框和临时数组都是空的用于创建div
+        if(this.value.length==0||tempArr.length==0){//文本框为空，临时数组为空
+            //如果页面中有div，则删除
+            if(document.getElementById("dv")){
+                document.getElementById("box1").removeChild(document.getElementById("dv"));
+            }
+            return;//后面程序不再执行
+        }
+        //创建div把div加入到id为box的div中
+        var dvObj = document.createElement("div");
+        dvObj.id="dv";
+        document.getElementById("box1").appendChild(dvObj);
+        dvObj.style.width="350px";
+        dvObj.style.border="1px solid red";
+
+        //把临时数组中的数据添加到dv中
+        //遍历临时数组，为每一个元素添加一个p标签
+        for(var i=0;i<tempArr.length;i++){
+            var pObj = document.createElement("p");
+            dvObj.appendChild(pObj);
+            setInnerText(pObj,tempArr[i]);
+            //鼠标进入
+            pObj.onmouseover=function () {
+                this.style.backgroundColor="yellow";
+            }
+            //鼠标出去
+            pObj.onmouseout=function () {
+                this.style.backgroundColor="";
+            }
+        }
+    };
+
+
+document.getElementById("btn").onclick=function () {
+    // var json={
+    //     width:800,
+    //     height:400,
+    //     left:20,
+    //     top:10
+    // }
+    // animate(document.getElementById("dv"),json);
+    var json1 = {"width":800,"height":400};
+    animate(document.getElementById("dv"),json1,function() {
+        var json2 = {"width":80,"height":40};
+        animate(document.getElementById("dv"),json2)
+    });
+};
+// jq轮播图
+$(function(){
+    var count = 0
+    $(".arrow-right").click(function(){
+        count++;
+        if(count == $(".slider li").length){
+            count = 0;
+        }
+        $(".slider li").eq(count).fadeIn().siblings("li").fadeOut()
+    });
+    $(".arrow-left").click(function(){
+        count--;
+        if(count ==-1){
+            count = $(".slider li").length - 1;
+        }
+        $(".slider li").eq(count).fadeIn().siblings("li").fadeOut()
+    });
+});
+// JQ淘宝
+$(function(){
+    $("#left1>li").mouseenter(function(){
+        //让中间对应的下标显示 eq()表示下表
+        var idx=$(this).index();
+        $("#center>li:eq("+idx+")").show().siblings().hide();
+    });
+    $("#right1>li").mouseenter(function(){
+        //让中间对应的下标显示
+        var idx=$(this).index()+9;
+        $("#center>li:eq("+idx+")").show().siblings().hide();
+    });
+});
+
+//下拉菜单
+$(function(){
+    var $li = $(".wrap>ul>li");
+    $li.mouseover(function(){
+        $(this).children("ul").stop().slideDown();
+    });
+    $li.mouseout(function(){
+        $(this).children("ul").stop().slideUp();
+    });
+});
+
+
+
+// 五角星评分
+$(function () {
+
+    //1. 给li注册鼠标经过事件，让自己和前面所有的兄弟都变成实心
+    var wjx_k = "☆";
+    var wjx_s = "★";
+    $(".comment>li").on("mouseenter",function(){
+        $(this).text(wjx_s).prevAll().text(wjx_s);
+        $(this).nextAll().text(wjx_k);//不能使用链式
+//    	$(this).text(wjx_s).prevAll().text(wjx_s).end().nextAll().text(wjx_k);
+    });
+
+    //2. 给ul注册鼠标离开时间，让所有的li都变成空心
+    $(".comment").on("mouseleave",function(){
+        $(this).children().text(wjx_k);
+        //最后点击的五角星是谁 找到current并且让其前面的变成实心
+        $("li.current").text(wjx_s).prevAll().text(wjx_s);
+    });
+    //3. 给li注册点击事件
+    $(".comment>li").on("click",function(){
+        $(this).addClass("current").siblings().removeClass("current");
+    });
+
+
+});
+
+
+
+
+
+
+//过去元素计算后的属性值
+function getStyle(element,attr) {
+
+    return window.getComputedStyle?window.getComputedStyle(element,null)[attr]:element.currentStyle[attr];
+}
+function animate(element,json,fn){//所有到达目标位置后调用fn回调函数
+    //先清理定时器，保证只产生一个定时器
+    clearInterval(element.timeId);
+    //清理定时器只产生一个定时器
+    element.timeId = setInterval(function(){//element.timeId每点击一次不再开辟空间，而是是是改变指向的位置
+        var flag = true;//假设全部到达目标
+        //获取当前位置
+        //left无法直接获取ctyle标签中的值，可以获取style属性中的值
+        for(var attr in json){//循环遍历json
+            //移动多少
+            var left = parseInt(getStyle(element,attr));
+            var target = json[attr];//当前属性对应的目标值
+            var step = (target-left)/10;
+            //判断step是否为正数，正数向上取整数,负数向下取正数
+            step = step>0?Math.ceil(step):Math.floor(step);
+            //判断当前位置是否小于目标，如果小于则为正，否则为负数 解决移动完成回不去得问题(左移右移)
+            // step = left<target?step:-step;
+            //每次移动后的距离
+            left+=step;
+            //目标位置
+            element.style[attr]=left+"px";
+            //是否到达目标
+            if(left!=target){
+                flag = false;
+            }
+        }
+        if(flag){
+            clearInterval(element.timeId);
+            ////所有到达目标位置后调用fn回调函数，前提用户传了参数
+            if(fn){//判断是否有回调函数
+                fn();
+            }
+        }
+        //测试代码
+        console.log("目标位置："+target+"，当前位置："+left+"，每次移动："+step);
+    },20)
+}
+</script>
+</body>
+</html>

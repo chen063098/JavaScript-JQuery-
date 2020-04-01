@@ -1,0 +1,166 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 2000px;
+}
+i{
+    font-style: normal;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+ol,ul{list-style:none}
+
+.search{
+    position: relative;
+    height: 95px;
+    width: 100%;
+    background-color: #f4f4f2;
+    overflow: hidden;
+}
+.city{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 14px;
+    height: 20px;
+    width: 150px;
+    cursor: pointer;
+    color: darkgray;
+}
+.city i{
+    color: #2a2a2b;
+    font-size: 16px;
+}
+.part{
+    margin-left: 50px;
+    margin-top: 10px;
+    height: 70px;
+
+}
+.part i{
+    width: 20px;
+    margin-top: 15px;
+    margin-left: -5px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 700;
+}
+.part span{
+    display: block;
+    float: left;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+    font-size: 23px;
+    color: #624f87;
+    line-height: 40px;
+}
+.line{
+    border-left: 1px solid darkgray;
+
+}
+/*导航栏开始*/
+.nav{
+    width: 100%;
+    height: 50px;
+    background-color: #f4f4f2;
+    line-height: 45px;
+}
+.nav ul{
+    margin-left: 280px;
+}
+.nav li{
+    text-decoration: none;
+    list-style:none;
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align:center ;
+    color: #333;
+
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+a:hover{
+    color: #666;
+}
+/*搜需框*/
+.find{
+    position: absolute;
+    top: 40px;
+    left: 850px;
+
+}
+.find input{
+    position: absolute;
+    margin-left: 10px;
+    width: 200px;
+    height: 20px;
+    border: 0;
+
+    border-radius: 30%;
+    display: none;
+}
+.find a{
+    position: absolute;
+    left: 205px;
+    top: -10px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color:#feb632;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+
+}
+/*旋转图标*/
+.body{
+    width: 100%;
+    height: 600px;
+
+}
+.wrap{
+    width:1200px;
+   margin-left:35px;
+    /*margin:100px auto;*/
+}
+.slide {
+    height:500px;
+    position: relative;
+}
+.slide li{
+    position: absolute;
+    left:200px;
+    top:0;
+}
+.slide li img{
+    width:100%;
+}
+.arrow{
+    opacity: 0;
+}
+.prev,.next{
+    width:76px;
+    height:112px;
+    position: absolute;
+    top:50%;
+    margin-top:-56px;
+    background: url(images/prev.png) no-repeat;
+    z-index: 99;
+}
+.next{
+    right:0;
+    background-image: url(images/next.png);
+}

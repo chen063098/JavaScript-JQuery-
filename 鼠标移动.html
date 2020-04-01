@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            position: absolute;
+        }
+        body{
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+<img src="images/bird.png" id="im"/>
+<script>
+    //把代码放在一个对象中
+    var evt={
+        //window.event和e的兼容代码
+        getEvt:function (evt) {
+            return window.event||e;
+        },
+        getClientX:function (evt) {
+            return this.getEvt(evt).clientX;//this.getEvt(evt)调用getEvt函数
+        },
+        getClientY:function (evt) {
+            return this.getEvt(evt).clientY;
+        },
+        getScrollLeft:function () {
+            return window.pageXOffset||document.documentElement.scrollLeft
+                ||document.body.scrollLeft||0;
+        },
+        getScrollTop:function () {
+            return window.pageYOffset||document.documentElement.scrollTop
+                ||document.body.scrollTop||0;
+        },
+        getPageX:function (evt) {
+            return this.getEvt(evt).pageX?this.getEvt(evt).pageX:this.getScrollLeft()+this.getClientX(evt);
+        },
+        getPageY:function (evt) {
+            return this.getEvt(evt).pageY?this.getEvt(evt).pageY:this.getScrollTop()+this.getClientY(evt);
+        }
+    };
+    document.onmousemove=function(e){
+        document.getElementById("im").style.left=evt.getPageX(e)+"px";
+        document.getElementById("im").style.top=evt.getPageY(e)+"px";
+    };
+
+</script>
+</body>
+
+</html>
